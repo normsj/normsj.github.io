@@ -4,8 +4,6 @@ $(document).ready(function(){
     for(i=0;i<wsitem.length;i++){
         $(wsitem[i]).attr('href', $(wsitem[i]).find("img").attr('src') + "");
     }
-    //SET MAG POP
-    $(wsitem).magnificPopup({type: 'image', gallery: {enabled: true}});
     
     $(".wrap").addClass("animated");
 
@@ -32,6 +30,10 @@ $(document).ready(function(){
             }
         ]
     });
+
+    // Flag to disable opening while dragging - "true" means MFP is allowed to open up.
+    var mfpOpen = true;  
+
     $("#my-works-slider").slick({
         autoplay: true,
         autoplaySpeed: 4000,
@@ -55,6 +57,24 @@ $(document).ready(function(){
             }
         ]
     });
+
+    // Set the flag using slick’s events  
+    $('#my-works-slider').on('beforeChange', function(){
+    mfpOpen = false;    
+    });  
+
+    $('#my-works-slider').on('afterChange', function(){    
+    mfpOpen = true;        
+    });  
+
+    //SET MAG POP
+    $(wsitem).magnificPopup({
+        type: 'image',
+        disableOn: function() {
+            return mfpOpen;
+        }, 
+        gallery: {enabled: true}
+    });  
 
     //section clicks
     $(".who").click(function(){
