@@ -36,23 +36,25 @@ $(document).ready(function(){
 
     $("#my-works-slider").slick({
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         infinite: true,
         slidesToShow: 5,
-        slidesToScroll:1,
+        slidesToScroll:4,
         prevArrow : $(".my-works .left-slide"),
         nextArrow : $(".my-works .right-slide"),
         responsive : [
             {
                 breakpoint: 999,
                 settings :{
-                    slidesToShow : 2
+                    slidesToShow : 2,
+                    slidesToScroll : 2
                 }
             },
             {
                 breakpoint: 480,
                 settings : {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]
