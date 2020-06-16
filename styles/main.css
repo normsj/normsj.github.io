@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "robo-bold", Helvetica, Arial, sans-serif;
 }
 
-p, a, span, li, button {
+p, a, span, li, button, div {
   font-family: "open", Helvetica, Arial, sans-serif;
 }
 
@@ -469,6 +469,7 @@ header .right a img {
 .main-content .my-works .container #my-works-slider .item {
   display: inline-block;
   padding: 8px;
+  text-decoration: none;
   background: white;
   border-radius: 4px;
   margin: 0 10px;
@@ -482,11 +483,22 @@ header .right a img {
   height: auto;
 }
 
+.main-content .my-works .container #my-works-slider .item p {
+  padding: 18px 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
 footer {
   background: #333;
   color: white;
   padding: 20px 0 32px;
   text-align: center;
+}
+
+footer p {
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 640px) {

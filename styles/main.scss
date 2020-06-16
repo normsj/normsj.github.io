@@ -63,7 +63,7 @@ $red :#ff6347;
 //defaults
 .container{max-width: 1366px; margin: 0 auto; padding: 0 24px;}
 h1,h2,h3,h4,h5,h6{font-family: $fonthead;}
-p,a,span,li,button{font-family: $fontmain;}
+p,a,span,li,button,div{font-family: $fontmain;}
 
 h1{font-size: 36px; line-height: 42px;}
 p{font-size: 20px; line-height: 24px;}
@@ -155,15 +155,18 @@ header{width: 100%; padding: 12px 0; background: white; display: flex; align-ite
             }
             #my-works-slider{width: 100%; padding: 24px 0;
                 .slick-track{display: flex; align-items: center;}
-                .item{display: inline-block; padding: 8px; background: white; border-radius: 4px; margin: 0 10px; box-shadow: 1px 1px 10px rgba(0,0,0,0.45);
+                .item{display: inline-block; padding: 8px; text-decoration: none; background: white; border-radius: 4px; margin: 0 10px; box-shadow: 1px 1px 10px rgba(0,0,0,0.45);
                     img{display: block; width: 100%; height: auto;}
+                    p{padding: 18px 0; font-size: 14px; color: #333; text-align: center;}
                 }
             }
         }
     }
 }
 
-footer {background: #333; color: white; padding: 20px 0 32px; text-align: center;}
+footer {background: #333; color: white; padding: 20px 0 32px; text-align: center;
+    p{font-size: 16px;}
+}
 
 //responsive
 @media only screen and (max-width: 640px) {
