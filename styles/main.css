@@ -265,8 +265,6 @@ header .right a img {
   left: 0;
   background: url("../images/food-on-white-background-256318.jpg");
   background-position: center;
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
   background-size: cover;
 }
 
@@ -276,7 +274,7 @@ header .right a img {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.25);
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
